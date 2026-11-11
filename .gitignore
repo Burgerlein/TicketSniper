@@ -1,0 +1,5 @@
+# Netzwerk-Aufnahmen (enthalten Cookies/Session-Daten)
+aufnahme-*.json
+
+# System
+.DS_Store

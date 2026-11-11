@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px/1.4 system-ui, sans-serif; margin: 0; padding: 12px 14px; width: 290px; }
+    h1 { font-size: 14px; margin: 0 0 12px; }
+    h2 { font-size: 12px; margin: 12px 0 4px; color: #444; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+    select, input[type="text"] { width: 160px; padding: 3px; box-sizing: border-box; }
+    .hint { color: #666; font-size: 12px; margin: 4px 0 0; }
+    .categories { font-size: 12px; max-height: 120px; overflow-y: auto; border-top: 1px solid #eee; padding-top: 4px; }
+    .categories div { display: flex; justify-content: space-between; gap: 8px; }
+    button.link { background: none; border: 0; padding: 0; color: #0b62d6; cursor: pointer; font: inherit; font-size: 12px; }
+    .switch { position: relative; width: 40px; height: 22px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; background: #ccc; border-radius: 22px; cursor: pointer; transition: .2s; }
+    .slider::before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: .2s; }
+    .switch input:checked + .slider { background: #1a7f37; }
+    .switch input:checked + .slider::before { transform: translateX(18px); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <h1>Auswahl-Helfer</h1>
+
+  <label class="row" id="toggle-row" hidden>
+    Aktiv in diesem Tab
+    <span class="switch">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </span>
+  </label>
+  <p class="hint" id="no-page" hidden>Kein Saalplan-Tab – Einstellungen gelten fürs nächste Mal.</p>
+
+  <h2>Einstellungen</h2>
+  <label class="row">
+    Stadion
+    <select id="venue"></select>
+  </label>
+
+  <label class="row">
+    Preis
+    <select id="price-mode">
+      <option value="cheapest">Günstigster</option>
+      <option value="fixed">Bestimmter Preis</option>
+    </select>
+  </label>
+
+  <label class="row" id="price-row" hidden>
+    Betrag
+    <select id="price-select"></select>
+  </label>
+
+  <label class="row" id="custom-price-row" hidden>
+    Anderer (€)
+    <input type="text" id="custom-price" placeholder="z. B. 18,50">
+  </label>
+
+  <label class="row">
+    Karten
+    <select id="ticket-count">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </label>
+
+  <p class="hint" id="venue-hint"></p>
+  <button class="link" id="reset-venue" hidden>Für dieses Stadion wieder Standard verwenden</button>
+
+  <div id="venue-info" hidden>
+    <h2 id="venue-info-title">Bekannte Kategorien</h2>
+    <div class="categories" id="venue-categories"></div>
+  </div>
+
+  <p class="hint" id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

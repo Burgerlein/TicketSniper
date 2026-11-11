@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Auswahl-Helfer",
+  "version": "0.4.0",
+  "description": "Benachrichtigt, sobald Plätze in der gewünschten Kategorie verfügbar sind. An/Aus, Preis und Anzahl im Popup.",
+  "action": {
+    "default_title": "Auswahl-Helfer",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.ticket-onlineshop.com/*"
+  ]
+}

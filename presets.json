@@ -1,0 +1,110 @@
+{
+  "_hinweis": "Voreingestellte Preise pro Stadion. Name muss exakt wie auf der Seite sein (venue_name). Preise mit Punkt, z. B. \"18.50\".",
+  "venues": {
+    "SIGNAL IDUNA PARK": {
+      "categories": [
+        {
+          "price": "18.50",
+          "names": [
+            "Stehplatz",
+            "Stehplatz Nord BVB",
+            "Kat. STEHPLATZ Jugend Promo"
+          ]
+        },
+        {
+          "price": "26.30",
+          "names": [
+            "Kat. 6 (sichteingeschränkt)",
+            "Kat. 6. (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "35.00",
+          "names": [
+            "Kat. 6",
+            "Kat. 6 Jugend Promo",
+            "Kat. 6 SO",
+            "Kat. 6."
+          ]
+        },
+        {
+          "price": "37.50",
+          "names": [
+            "Kat. 5 (sichteingeschränkt)",
+            "Kat. 5. (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "42.80",
+          "names": [
+            "Kat. 4 (sichteingeschränkt)",
+            "Kat. 4 REWE (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "48.80",
+          "names": [
+            "Kat. 3 (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "50.00",
+          "names": [
+            "Kat. 5",
+            "Kat. 5."
+          ]
+        },
+        {
+          "price": "52.50",
+          "names": [
+            "Kat. 2 (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "57.00",
+          "names": [
+            "Kat. 4",
+            "Kat. 4 REWE Familienblock",
+            "Kat. 4. Promo"
+          ]
+        },
+        {
+          "price": "63.80",
+          "names": [
+            "Kat. 1 (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "65.00",
+          "names": [
+            "Kat. 3"
+          ]
+        },
+        {
+          "price": "70.00",
+          "names": [
+            "Kat. 2"
+          ]
+        },
+        {
+          "price": "71.30",
+          "names": [
+            "Kat. 15 (sichteingeschränkt)"
+          ]
+        },
+        {
+          "price": "85.00",
+          "names": [
+            "Kat. 1"
+          ]
+        },
+        {
+          "price": "95.00",
+          "names": [
+            "Kat. 15"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Netzwerk-Rekorder",
+  "version": "0.1.0",
+  "description": "Zeichnet passiv Requests, Redirects und Navigationen (inkl. SPA-Routing) aktivierter Tabs auf. Export als JSON und HAR.",
+  "action": {
+    "default_title": "Netzwerk-Rekorder",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "debugger",
+    "storage",
+    "unlimitedStorage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

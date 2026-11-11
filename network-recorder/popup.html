@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px/1.4 system-ui, sans-serif; margin: 0; padding: 12px 14px; width: 290px; }
+    h1 { font-size: 14px; margin: 0 0 12px; }
+    h2 { font-size: 12px; margin: 12px 0 4px; color: #444; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+    input[type="text"] { flex: 1; padding: 3px; box-sizing: border-box; }
+    button { font: inherit; padding: 3px 8px; cursor: pointer; }
+    .hint { color: #666; font-size: 12px; margin: 4px 0 0; }
+    .danger { color: #d1242f; }
+    .switch { position: relative; width: 40px; height: 22px; flex-shrink: 0; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; background: #ccc; border-radius: 22px; cursor: pointer; transition: .2s; }
+    .slider::before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: .2s; }
+    .switch input:checked + .slider { background: #d1242f; }
+    .switch input:checked + .slider::before { transform: translateX(18px); }
+  </style>
+</head>
+<body>
+  <h1>Netzwerk-Rekorder</h1>
+
+  <label class="row">
+    Aufnahme in diesem Tab
+    <span class="switch">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </span>
+  </label>
+
+  <label class="row">
+    <span>Antwort-Bodies + WebSockets<br><span class="hint">über Debugger, zeigt Chrome-Leiste</span></span>
+    <input type="checkbox" id="bodies">
+  </label>
+
+  <p class="hint" id="count"></p>
+
+  <h2>Marker</h2>
+  <div class="row">
+    <input type="text" id="marker-text" placeholder="z. B. Warteschlange vorbei">
+    <button id="add-marker">Setzen</button>
+  </div>
+
+  <h2>Export</h2>
+  <div class="row">
+    <button id="export-json">JSON</button>
+    <button id="export-har">HAR</button>
+    <button id="clear" class="danger">Löschen</button>
+  </div>
+  <p class="hint">Enthält Cookies und Session-Tokens – nicht weitergeben.</p>
+
+  <p class="hint" id="status"></p>
+
+  <script src="har.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
